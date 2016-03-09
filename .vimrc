@@ -313,7 +313,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.readonly = ''
 
 " new file set title and turn to endline
-autocmd BufNewFile *.sh,*.py,*.rb,*pl exec ":call SetTitle()"
+autocmd BufNewFile *.sh,*.py,*.rb,*.pl exec ":call SetTitle()"
 function SetTitle()
     if &filetype == 'sh'
         call setline(1,"\#!/bin/bash")
