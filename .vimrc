@@ -180,7 +180,7 @@ imap <C-J> <C-X><C-O>
 
 
 " use 256 colors when possible
-if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
+if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256\|screen-bce'
 	let &t_Co = 256
     colorscheme molokai
 else
