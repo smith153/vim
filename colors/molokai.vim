@@ -51,7 +51,7 @@ hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
 hi Function        guifg=#66D9EF
-hi Identifier      guifg=#8700ff
+hi Identifier      guifg=#00FFFF
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
 
@@ -111,7 +111,7 @@ hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
 
 if s:molokai_original == 1
    hi Normal          guifg=#F8F8F2 guibg=#272822
-   hi Comment         guifg=#75715E
+   hi Comment         guifg=#5F5FAF
    hi CursorLine                    guibg=#3E3D32
    hi CursorLineNr    guifg=#FD971F               gui=none
    hi CursorColumn                  guibg=#3E3D32
@@ -121,7 +121,7 @@ if s:molokai_original == 1
    hi SpecialKey      guifg=#75715E
 else
    hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#7E8E91
+   hi Comment         guifg=5F5FAF
    hi CursorLine                    guibg=#293739
    hi CursorLineNr    guifg=#FD971F               gui=none
    hi CursorColumn                  guibg=#293739
@@ -168,7 +168,7 @@ if &t_Co > 255
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
    hi Function        ctermfg=81               cterm=bold
-   hi Identifier      ctermfg=93               cterm=bold
+   hi Identifier      ctermfg=14               cterm=bold
    hi Ignore          ctermfg=244 ctermbg=232
    hi IncSearch       ctermfg=193 ctermbg=16
 
@@ -224,7 +224,7 @@ if &t_Co > 255
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
-   hi Comment         ctermfg=59
+   hi Comment         ctermfg=61
    hi CursorColumn                ctermbg=236
    hi ColorColumn                 ctermbg=236
    hi LineNr          ctermfg=250 ctermbg=236
@@ -251,7 +251,7 @@ if &t_Co > 255
        hi Exception       ctermfg=154               cterm=bold
        hi Float           ctermfg=141
        hi Function        ctermfg=81                cterm=bold
-       hi Identifier      ctermfg=93                cterm=bold
+       hi Identifier      ctermfg=14                cterm=bold
 
        hi Keyword         ctermfg=226               cterm=bold
        hi Operator        ctermfg=197
@@ -264,7 +264,7 @@ if &t_Co > 255
        hi Title           ctermfg=203
        hi Visual                      ctermbg=238
 
-       hi Comment         ctermfg=244
+       hi Comment         ctermfg=61
        hi LineNr          ctermfg=239 ctermbg=235
        hi NonText         ctermfg=239
        hi SpecialKey      ctermfg=239
