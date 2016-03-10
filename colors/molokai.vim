@@ -29,7 +29,7 @@ endif
 
 hi Boolean         guifg=#AE81FF
 hi Character       guifg=#E6DB74
-hi Number          guifg=#AE81FF
+hi Number          guifg=#AF5F00
 hi String          guifg=#ff00ff
 hi Conditional     guifg=#f8ff21               gui=bold
 hi Constant        guifg=#AE81FF               gui=bold
@@ -47,7 +47,7 @@ hi Directory       guifg=#A6E22E               gui=bold
 hi Error           guifg=#E6DB74 guibg=#1E0010
 hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
 hi Exception       guifg=#A6E22E               gui=bold
-hi Float           guifg=#AE81FF
+hi Float           guifg=#AF5F00
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
 hi Function        guifg=#66D9EF
@@ -146,7 +146,7 @@ if &t_Co > 255
    endif
    hi Boolean         ctermfg=135
    hi Character       ctermfg=144
-   hi Number          ctermfg=135
+   hi Number          ctermfg=220               cterm=bold
    hi String          ctermfg=201               cterm=bold
    hi Conditional     ctermfg=226               cterm=bold
    hi Constant        ctermfg=135               cterm=bold
@@ -164,7 +164,7 @@ if &t_Co > 255
    hi Error           ctermfg=219 ctermbg=89
    hi ErrorMsg        ctermfg=199 ctermbg=16    cterm=bold
    hi Exception       ctermfg=118               cterm=bold
-   hi Float           ctermfg=135
+   hi Float           ctermfg=220               cterm=bold
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
    hi Function        ctermfg=81               cterm=bold
@@ -239,7 +239,7 @@ if &t_Co > 255
 
        hi Boolean         ctermfg=141
        hi Character       ctermfg=222
-       hi Number          ctermfg=141
+       hi Number          ctermfg=220               cterm=bold
        hi String          ctermfg=201               cterm=bold
        hi Conditional     ctermfg=226               cterm=bold
        hi Constant        ctermfg=141               cterm=bold
@@ -249,7 +249,7 @@ if &t_Co > 255
        hi Directory       ctermfg=154               cterm=bold
        hi Error           ctermfg=222 ctermbg=233
        hi Exception       ctermfg=154               cterm=bold
-       hi Float           ctermfg=141
+       hi Float           ctermfg=220               cterm=bold
        hi Function        ctermfg=81                cterm=bold
        hi Identifier      ctermfg=14                cterm=bold
 
