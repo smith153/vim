@@ -129,7 +129,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 " hidden startup messages
-set shortmess=atI
+"set shortmess=atI
 " auto read and write
 set autowrite
 set autoread

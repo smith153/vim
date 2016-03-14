@@ -1,0 +1,12 @@
+source /etc/screenrc
+caption always "%{Yk} %H %0c:%s %{k}|%{G} %l %{k}|%{W} %-w%{+u}%n %t%{-u}%+w"
+defscrollback 10000
+vbell off
+deflogin on
+defautonuke off
+
+
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+
