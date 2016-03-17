@@ -241,12 +241,18 @@ let g:vim_debug_disable_mappings = 1
 " map <F11> :Dbg down<CR>
 " map <F12> :Dbg up<CR>
 
+
+" colorizer
+let g:colorizer_maxlines = 1000
+
 " Syntastic ------------------------------
 
 " show list of errors and warnings on the current file
 nmap <leader>e :Errors<CR>
 " check also when just opened the file
 let g:syntastic_check_on_open = 0
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=E501'
 " syntastic checker for javascript.
 " eslint is the only tool support JSX.
 " If you don't need write JSX, you can use jshint.
@@ -265,6 +271,7 @@ let g:syntastic_style_warning_symbol = '⚠'
 " autopep8 ------------------------------
 " disable diff
 let g:autopep8_disable_show_diff=1
+let g:autopep8_max_line_length=79
 
 " SuperTab ------------------------------
 " Autocomplete to longest common match
