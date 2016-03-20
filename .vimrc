@@ -272,6 +272,7 @@ let g:syntastic_style_warning_symbol = '⚠'
 " disable diff
 let g:autopep8_disable_show_diff=1
 let g:autopep8_max_line_length=79
+let g:autopep8_aggressive=1
 
 " SuperTab ------------------------------
 " Autocomplete to longest common match
