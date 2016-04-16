@@ -86,6 +86,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'lilydjwg/colorizer'
 "Bundle autopep8
 Bundle 'tell-k/vim-autopep8'
+"Bundle js-indent
+Bundle 'gavocanov/vim-js-indent'
 
 " Plugins from vim-scripts repos:
 
