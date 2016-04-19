@@ -246,6 +246,8 @@ let g:vim_debug_disable_mappings = 1
 
 " colorizer
 let g:colorizer_maxlines = 1000
+" paren match
+"let g:loaded_matchparen = 1
 
 " Syntastic ------------------------------
 
