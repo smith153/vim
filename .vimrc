@@ -13,16 +13,23 @@ let perlpath=1
 
 "define :Tidy command to run perltidy on visual selection || entire buffer"
 command -range=% -nargs=* Tidy <line1>,<line2>!perltidy
+command -range=% -nargs=* DoAutopep8 <line1>,<line2>!autopep8 --max-line-length 79 --aggressive -
 
 "run :Tidy on entire buffer and return cursor to (approximate) original position"
 fun DoTidy()
-    let l = line(".")
-    let c = col(".")
+    let current_cursor = getpos(".")
     :Tidy
-    call cursor(l, c)
+    call setpos('.', current_cursor)
 endfun"
 
-autocmd FileType python nmap <buffer> <F2> :call Autopep8()<CR>
+fun Autopep88()
+    let current_cursor = getpos(".")
+    :DoAutopep8
+    call setpos('.', current_cursor)
+endfun"
+
+autocmd FileType python nmap <F2> :call Autopep88()<CR>
+autocmd FileType python vmap <F2> :DoAutopep8<CR>
 "shortcut for normal mode to run on entire buffer then return to current line"
 au Filetype perl nmap <F2> :call DoTidy()<CR>
 
@@ -85,7 +92,7 @@ Bundle 'scrooloose/syntastic'
 " Paint css colors with the real color
 Bundle 'lilydjwg/colorizer'
 "Bundle autopep8
-Bundle 'tell-k/vim-autopep8'
+"Bundle 'tell-k/vim-autopep8'
 "Bundle js-indent
 Bundle 'gavocanov/vim-js-indent'
 
