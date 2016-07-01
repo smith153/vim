@@ -13,7 +13,7 @@ let perlpath=1
 
 "define :Tidy command to run perltidy on visual selection || entire buffer"
 command -range=% -nargs=* Tidy <line1>,<line2>!perltidy
-command -range=% -nargs=* DoAutopep8 <line1>,<line2>!autopep8 --max-line-length 79 --aggressive -
+command -range=% -nargs=* DoAutopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
 
 "run :Tidy on entire buffer and return cursor to (approximate) original position"
 fun DoTidy()
