@@ -315,6 +315,9 @@ if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
 
+" disable word count, save CPU
+let g:airline#extensions#wordcount#enabled = 0
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
