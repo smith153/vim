@@ -13,6 +13,7 @@ let perlpath=1
 
 "define :Tidy command to run perltidy on visual selection || entire buffer"
 command -range=% -nargs=* Tidy <line1>,<line2>!perltidy
+command -range=% -nargs=* Astyle <line1>,<line2>!astyle
 command -range=% -nargs=* DoAutopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
 
 "run :Tidy on entire buffer and return cursor to (approximate) original position"
@@ -22,13 +23,21 @@ fun DoTidy()
     call setpos('.', current_cursor)
 endfun"
 
-fun Autopep88()
+fun DoAstyle()
+    let current_cursor = getpos(".")
+    :Astyle
+    call setpos('.', current_cursor)
+endfun"
+
+fun Autopep8()
     let current_cursor = getpos(".")
     :DoAutopep8
     call setpos('.', current_cursor)
 endfun"
 
-autocmd FileType python nmap <F2> :call Autopep88()<CR>
+autocmd FileType c nmap <F2> :call DoAstyle()<CR>
+autocmd FileType c vmap <F2> :Astyle<CR>
+autocmd FileType python nmap <F2> :call Autopep8()<CR>
 autocmd FileType python vmap <F2> :DoAutopep8<CR>
 "shortcut for normal mode to run on entire buffer then return to current line"
 au Filetype perl nmap <F2> :call DoTidy()<CR>
