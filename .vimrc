@@ -375,6 +375,7 @@ autocmd BufNewFile * normal G
 
 " if you use JSX syntax in .js file, please enable it.
 let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 1
 
 " Vim-markdown ------------------------------
 
