@@ -146,6 +146,8 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set modeline
+set modelines=5
 " hidden startup messages
 "set shortmess=atI
 " auto read and write
