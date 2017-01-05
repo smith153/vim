@@ -123,6 +123,8 @@ Bundle 'matchit.zip'
 "Bundle 'fatih/vim-go'
 " JSX syntax highlight.
 Bundle 'mxw/vim-jsx'
+" JS highlight
+Bundle 'pangloss/vim-javascript'
 
 " ============================================================================
 " Install plugins the first time vim runs
