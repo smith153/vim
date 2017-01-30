@@ -14,7 +14,7 @@ let perlpath=1
 "define :Tidy command to run perltidy on visual selection || entire buffer"
 command -range=% -nargs=* Tidy <line1>,<line2>!perltidy
 command -range=% -nargs=* Astyle <line1>,<line2>!astyle
-command -range=% -nargs=* JsPretty <line1>,<line2>!prettier --tab-width 4 --flow-parser --trailing-comma
+command -range=% -nargs=* JsPretty <line1>,<line2>!prettier --tab-width 4 --single-quote --stdin --trailing-comma
 command -range=% -nargs=* DoAutopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
 
 "run :Tidy on entire buffer and return cursor to (approximate) original position"
@@ -38,7 +38,7 @@ endfun"
 
 fun JsPretty()
     let current_cursor = getpos(".")
-    :DoAutopep8
+    :JsPretty
     call setpos('.', current_cursor)
 endfun"
 
