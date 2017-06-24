@@ -14,8 +14,9 @@ let perlpath=1
 "define :Tidy command to run perltidy on visual selection || entire buffer"
 command -range=% -nargs=* Tidy <line1>,<line2>!perltidy
 command -range=% -nargs=* Astyle <line1>,<line2>!astyle
-command -range=% -nargs=* JsPretty <line1>,<line2>!prettier --tab-width 4 --single-quote --print-width 110 --stdin
-command -range=% -nargs=* DoAutopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
+command -range=% -nargs=* Prettier <line1>,<line2>!prettier --tab-width 4 --single-quote --print-width 110 --stdin
+command -range=% -nargs=* Autopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
+command -range=% -nargs=* JSPretty <line1>,<line2>!js-beautify -s 2 --type html -m 1
 
 "run :Tidy on entire buffer and return cursor to (approximate) original position"
 fun DoTidy()
@@ -30,24 +31,34 @@ fun DoAstyle()
     call setpos('.', current_cursor)
 endfun"
 
-fun Autopep8()
+fun DoAutopep8()
     let current_cursor = getpos(".")
-    :DoAutopep8
+    :Autopep8
     call setpos('.', current_cursor)
 endfun"
 
-fun JsPretty()
+fun DoPrettier()
     let current_cursor = getpos(".")
-    :JsPretty
+    :Prettier
     call setpos('.', current_cursor)
 endfun"
+
+fun DoJSPretty()
+    let current_cursor = getpos(".")
+    :JSPretty
+    call setpos('.', current_cursor)
+endfun"
+
 
 autocmd FileType c nmap <F2> :call DoAstyle()<CR>
 autocmd FileType c vmap <F2> :Astyle<CR>
-autocmd FileType python nmap <F2> :call Autopep8()<CR>
-autocmd FileType python vmap <F2> :DoAutopep8<CR>
-autocmd FileType javascript nmap <F2> :call JsPretty()<CR>
-autocmd FileType javascript vmap <F2> :JsPretty<CR>
+autocmd FileType python nmap <F2> :call DoAutopep8()<CR>
+autocmd FileType python vmap <F2> :Autopep8<CR>
+autocmd FileType javascript nmap <F2> :call DoPrettier()<CR>
+autocmd FileType javascript vmap <F2> :Prettier<CR>
+autocmd FileType tt2html nmap <F2> :call DoJSPretty()<CR>
+autocmd FileType tt2html vmap <F2> :JSPretty<CR>
+
 
 "shortcut for normal mode to run on entire buffer then return to current line"
 au Filetype perl nmap <F2> :call DoTidy()<CR>
