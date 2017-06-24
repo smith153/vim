@@ -170,10 +170,13 @@ set nobackup
 set background=dark
 set encoding=utf-8
 
+" autoset Perl Template::Toolkit files
+autocmd BufNewFile,BufRead *.tt set filetype=tt2html
 
 " tab length exceptions on some file types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType tt2html setlocal shiftwidth=2 tabstop=2 softtabstop=2 syntax=tt2html
 " autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " always show status bar
