@@ -16,7 +16,7 @@ command -range=% -nargs=* Tidy <line1>,<line2>!perltidy
 command -range=% -nargs=* Astyle <line1>,<line2>!astyle
 command -range=% -nargs=* Prettier <line1>,<line2>!prettier --tab-width 4 --single-quote --print-width 110 --stdin
 command -range=% -nargs=* Autopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
-command -range=% -nargs=* JSPretty <line1>,<line2>!js-beautify -s 2 --type html -m 1
+command -range=% -nargs=* JSPretty <line1>,<line2>!js-beautify -s 2 --type html -m 1 -
 
 "run :Tidy on entire buffer and return cursor to (approximate) original position"
 fun DoTidy()
