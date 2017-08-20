@@ -11,61 +11,6 @@ let python_highlight_all=1
 " disable perl include directories
 let perlpath=1
 
-"define :Tidy command to run perltidy on visual selection || entire buffer"
-command -range=% -nargs=* Tidy <line1>,<line2>!perltidy
-command -range=% -nargs=* Astyle <line1>,<line2>!astyle
-command -range=% -nargs=* Prettier <line1>,<line2>!prettier --tab-width 4 --single-quote --print-width 110 --trailing-comma all --stdin
-command -range=% -nargs=* Autopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
-command -range=% -nargs=* JSPretty <line1>,<line2>!js-beautify -s 2 --type html -m 1 -
-
-"run :Tidy on entire buffer and return cursor to (approximate) original position"
-fun DoTidy()
-    let current_cursor = getpos(".")
-    :Tidy
-    call setpos('.', current_cursor)
-endfun"
-
-fun DoAstyle()
-    let current_cursor = getpos(".")
-    :Astyle
-    call setpos('.', current_cursor)
-endfun"
-
-fun DoAutopep8()
-    let current_cursor = getpos(".")
-    :Autopep8
-    call setpos('.', current_cursor)
-endfun"
-
-fun DoPrettier()
-    let current_cursor = getpos(".")
-    :Prettier
-    call setpos('.', current_cursor)
-endfun"
-
-fun DoJSPretty()
-    let current_cursor = getpos(".")
-    :JSPretty
-    call setpos('.', current_cursor)
-endfun"
-
-
-autocmd FileType c nmap <F2> :call DoAstyle()<CR>
-autocmd FileType c vmap <F2> :Astyle<CR>
-autocmd FileType python nmap <F2> :call DoAutopep8()<CR>
-autocmd FileType python vmap <F2> :Autopep8<CR>
-autocmd FileType javascript nmap <F2> :call DoPrettier()<CR>
-autocmd FileType javascript vmap <F2> :Prettier<CR>
-autocmd FileType tt2html nmap <F2> :call DoJSPretty()<CR>
-autocmd FileType tt2html vmap <F2> :JSPretty<CR>
-
-
-"shortcut for normal mode to run on entire buffer then return to current line"
-au Filetype perl nmap <F2> :call DoTidy()<CR>
-
-"shortcut for visual mode to run on the the current visual selection"
-au Filetype perl vmap <F2> :Tidy<CR>
-
 " Setting up Vundle - the best vim plugin manager
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
@@ -181,14 +126,6 @@ set nobackup
 set background=dark
 set encoding=utf-8
 
-" autoset Perl Template::Toolkit files
-autocmd BufNewFile,BufRead *.tt set filetype=tt2html
-
-" tab length exceptions on some file types
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType tt2html setlocal shiftwidth=2 tabstop=2 softtabstop=2 syntax=tt2html
-" autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " always show status bar
 set laststatus=2
