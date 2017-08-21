@@ -17,8 +17,8 @@ if !exists("*DoPrettier")
     endfun
 endif
 
-nmap <buffer> <F2> :call DoPrettier()<CR>
-vmap <buffer> <F2> :Prettier<CR>
+nnoremap <buffer> <F2> :<C-U>call DoPrettier()<CR>
+xnoremap <buffer> <F2> :Prettier<CR>
 
 
 

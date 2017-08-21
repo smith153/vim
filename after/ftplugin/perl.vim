@@ -17,7 +17,7 @@ if !exists("*DoTidy")
     endfun
 endif
 
-nmap <buffer> <F2> :call DoTidy()<CR>
-vmap <buffer> <F2> :Tidy<CR>
+nnoremap <buffer> <F2> :<C-U>call DoTidy()<CR>
+xnoremap <buffer> <F2> :Tidy<CR>
 
 

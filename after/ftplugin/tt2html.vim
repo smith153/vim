@@ -17,8 +17,8 @@ if !exists("*DoJSPretty")
     endfun
 endif
 
-nmap <buffer> <F2> :call DoJSPretty()<CR>
-vmap <buffer> <F2> :JSPretty<CR>
+nnoremap <buffer> <F2> :<C-U>call DoJSPretty()<CR>
+xnoremap <buffer> <F2> :JSPretty<CR>
 
 setlocal shiftwidth=2 tabstop=2 softtabstop=2 syntax=tt2html
 

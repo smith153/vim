@@ -17,7 +17,7 @@ if !exists("*DoAutopep8")
     endfun
 endif
 
-nmap <buffer> <F2> :call DoAutopep8()<CR>
-vmap <buffer> <F2> :Autopep8<CR>
+nnoremap <buffer> <F2> :<C-U>call DoAutopep8()<CR>
+xnoremap <buffer> <F2> :Autopep8<CR>
 
 

@@ -18,7 +18,7 @@ if !exists("*DoAstyle")
 
 endif
 
-nmap <buffer> <F2> :call DoAstyle()<CR>
-vmap <buffer> <F2> :Astyle<CR>
+nnoremap <buffer> <F2> :<C-U>call DoAstyle()<CR>
+xnoremap <buffer> <F2> :Astyle<CR>
 
 
