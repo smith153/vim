@@ -6,7 +6,7 @@ endif
 let b:loaded_js_ftplugin=1
 
 if !exists(':Prettier')
-    command -range=% -nargs=* Prettier <line1>,<line2>!prettier --tab-width 4 --single-quote --print-width 110 --trailing-comma all --stdin
+    command -range=% -nargs=* Prettier <line1>,<line2>!prettier --tab-width 4 --single-quote --print-width 110 --trailing-comma es5 --stdin
 endif
 
 if !exists("*DoPrettier")
