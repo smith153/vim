@@ -37,9 +37,9 @@ Bundle 'gmarik/vundle'
 " Plugins from github repos:
 
 " Python and PHP Debugger
-Bundle 'fisadev/vim-debug.vim'
+"Bundle 'fisadev/vim-debug.vim'
 " Class/module browser
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 " Airline
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
@@ -49,7 +49,7 @@ Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'Townk/vim-autoclose'
 "Bundle 'Raimondi/delimitMate'
 " Indent text object
-Bundle 'michaeljsmith/vim-indent-object'
+"Bundle 'michaeljsmith/vim-indent-object'
 " Python mode (indentation, doc, refactor, lints, code checking, motion and
 " operators, highlighting, run and ipdb breakpoints)
 "Bundle 'klen/python-mode'
@@ -69,7 +69,7 @@ Bundle 'lilydjwg/colorizer'
 "Bundle autopep8
 "Bundle 'tell-k/vim-autopep8'
 "Bundle js-indent
-Bundle 'gavocanov/vim-js-indent'
+"Bundle 'gavocanov/vim-js-indent'
 
 " Plugins from vim-scripts repos:
 
