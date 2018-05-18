@@ -1,9 +1,9 @@
 
-if exists("b:loaded_html_ftplugin")
+if exists("b:loaded_tt2html_ftplugin")
     finish
 endif
 
-let b:loaded_html_ftplugin=1
+let b:loaded_tt2html_ftplugin=1
 
 if !exists(':JSPretty')
     command -range=% -nargs=* JSPretty <line1>,<line2>!js-beautify -s 2 --type html -m 1 -
