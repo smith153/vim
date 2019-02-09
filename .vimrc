@@ -234,7 +234,8 @@ let g:colorizer_maxlines = 1000
 
 " show list of errors and warnings on the current file
 nmap <leader>e :Errors<CR>
-" check also when just opened the file
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E501'
@@ -267,6 +268,7 @@ let g:SuperTabCrMapping = 1
 let g:SuperTabLongestHighlight = 1
 " auto close window
 let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabDefaultCompletionType = "context"
 " TabMan ------------------------------
 
 " mappings to toggle display, and to focus on it
@@ -294,7 +296,7 @@ let g:airline#extensions#wordcount#enabled = 0
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'bubblegum'
-let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 
