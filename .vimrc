@@ -164,7 +164,7 @@ imap <M-Up> <ESC><c-w>k
 imap <M-Down> <ESC><c-w>j
 
 "buffer nav
-map tt :e
+map tt :e<space>
 map <leader>j :bn<cr>
 map <leader>h :bp<cr>
 map <leader>d :bd<cr>
