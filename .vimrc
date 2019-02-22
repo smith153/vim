@@ -126,6 +126,9 @@ set nobackup
 set background=dark
 set encoding=utf-8
 
+"no warn on new buffer
+set hidden
+
 
 " always show status bar
 set laststatus=2
@@ -138,10 +141,12 @@ set hlsearch
 " syntax highlight on
 syntax on
 
+"set leader
+let mapleader = ";"
 
 " tab navigation mappings
 map tm :tabm 
-map tt :tabnew 
+"map tt :tabnew 
 map ts :tab split<CR>
 map <C-S-Right> :tabn<CR>
 imap <C-S-Right> <ESC>:tabn<CR>
@@ -157,6 +162,16 @@ imap <M-Right> <ESC><c-w>l
 imap <M-Left> <ESC><c-w>h
 imap <M-Up> <ESC><c-w>k
 imap <M-Down> <ESC><c-w>j
+
+"buffer nav
+map tt :e
+map <leader>j :bn<cr>
+map <leader>h :bp<cr>
+map <leader>d :bd<cr>
+map <leader>b :buffers<cr>:b<space> 
+map fr :bn<cr>
+map fR :bp<cr>
+
 
 " old autocomplete keyboard shortcut
 imap <C-J> <C-X><C-O>
