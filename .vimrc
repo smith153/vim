@@ -25,10 +25,10 @@ endif
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " ============================================================================
 " Active plugins
@@ -37,60 +37,66 @@ Bundle 'gmarik/vundle'
 " Plugins from github repos:
 
 " Python and PHP Debugger
-"Bundle 'fisadev/vim-debug.vim'
+"Plugin 'fisadev/vim-debug.vim'
 " Class/module browser
-"Bundle 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 " Airline
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Surround
-"Bundle 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 " Autoclose parentheses
-"Bundle 'Townk/vim-autoclose'
-"Bundle 'Raimondi/delimitMate'
+"Plugin 'Townk/vim-autoclose'
+"Plugin 'Raimondi/delimitMate'
 " Indent text object
-"Bundle 'michaeljsmith/vim-indent-object'
+"Plugin 'michaeljsmith/vim-indent-object'
 " Python mode (indentation, doc, refactor, lints, code checking, motion and
 " operators, highlighting, run and ipdb breakpoints)
-"Bundle 'klen/python-mode'
+"Plugin 'klen/python-mode'
 " Better autocompletion
-Bundle 'ervandew/supertab'
-"Bundle 'Shougo/neocomplete.vim'
+Plugin 'ervandew/supertab'
+"Plugin 'Shougo/neocomplete.vim'
 " awesome colorscheme
-"Bundle 'tomasr/molokai'
+"Plugin 'tomasr/molokai'
 " Automatically sort python imports
-"Bundle 'fisadev/vim-isort'
+"Plugin 'fisadev/vim-isort'
 " Window chooser
-Bundle 't9md/vim-choosewin'
+Plugin 't9md/vim-choosewin'
 " Python and other languages code checker
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 " Paint css colors with the real color
-Bundle 'lilydjwg/colorizer'
-"Bundle autopep8
-"Bundle 'tell-k/vim-autopep8'
-"Bundle js-indent
-"Bundle 'gavocanov/vim-js-indent'
+Plugin 'lilydjwg/colorizer'
+"Plugin autopep8
+"Plugin 'tell-k/vim-autopep8'
+"Plugin js-indent
+"Plugin 'gavocanov/vim-js-indent'
 
 " Plugins from vim-scripts repos:
 
 " Search results counter
-Bundle 'IndexedSearch'
+Plugin 'IndexedSearch'
 " XML/HTML tags navigation
-Bundle 'matchit.zip'
+Plugin 'matchit.zip'
 " Gvim colorscheme
-"Bundle 'Wombat'
+"Plugin 'Wombat'
 " Yank history navigation
-"Bundle 'YankRing.vim'
+"Plugin 'YankRing.vim'
 " javascript complete after install the plugin, you must cd the install
 " directory and run `npm install`, then add a .tern-project config file
 " the doc at http://ternjs.net/doc/manual.html#vim
-"Bundle 'marijnh/tern_for_vim'
+"Plugin 'marijnh/tern_for_vim'
 " Golang Plugins
-"Bundle 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 " JSX syntax highlight.
-Bundle 'mxw/vim-jsx'
+Plugin 'mxw/vim-jsx'
 " JS highlight
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
+" Vue highlight
+Plugin 'posva/vim-vue'
+" html5 support
+Plugin 'othree/html5.vim'
+
+call vundle#end()
 
 " ============================================================================
 " Install plugins the first time vim runs
@@ -98,7 +104,7 @@ Bundle 'pangloss/vim-javascript'
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""
-    :BundleInstall
+    :PluginInstall
 endif
 
 " ============================================================================
@@ -171,6 +177,7 @@ map <leader>d :bd<cr>
 map <leader>b :buffers<cr>:b<space> 
 map fr :bn<cr>
 map fR :bp<cr>
+map fd :bd<cr>
 
 
 " old autocomplete keyboard shortcut
