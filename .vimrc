@@ -291,6 +291,12 @@ let g:SuperTabLongestHighlight = 1
 " auto close window
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:SuperTabDefaultCompletionType = "context"
+" Supertab: try omni first, then keyword completion
+autocmd FileType *
+  \ if &omnifunc != '' |
+  \   call SuperTabChain(&omnifunc, "<c-p>") |
+  \ endif
+
 " TabMan ------------------------------
 
 " mappings to toggle display, and to focus on it
