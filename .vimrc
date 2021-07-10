@@ -290,12 +290,12 @@ let g:SuperTabCrMapping = 1
 let g:SuperTabLongestHighlight = 1
 " auto close window
 let g:SuperTabClosePreviewOnPopupClose = 1
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 " Supertab: try omni first, then keyword completion
-autocmd FileType *
-  \ if &omnifunc != '' |
-  \   call SuperTabChain(&omnifunc, "<c-p>") |
-  \ endif
+"autocmd FileType *
+"  \ if &omnifunc != '' |
+"  \   call SuperTabChain("<c-p>", &omnifunc) |
+"  \ endif
 
 " TabMan ------------------------------
 
