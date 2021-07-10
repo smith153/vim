@@ -260,7 +260,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_python_checkers = ['mypy', 'flake8']
-let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_python_flake8_args='--ignore=E501,W504'
 " syntastic checker for javascript.
 " eslint is the only tool support JSX.
 " If you don't need write JSX, you can use jshint.
