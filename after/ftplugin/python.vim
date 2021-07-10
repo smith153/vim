@@ -6,7 +6,7 @@ endif
 let b:loaded_py_ftplugin=1
 
 if !exists(':Autopep8')
-    command -range=% -nargs=* Autopep8 <line1>,<line2>!autopep8 --max-line-length 79 -a -a -a  -
+    command -range=% -nargs=* Autopep8 <line1>,<line2>!autopep8 -
 endif
 
 if !exists("*DoAutopep8")
