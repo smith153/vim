@@ -87,10 +87,10 @@ Plugin 'matchit.zip'
 "Plugin 'marijnh/tern_for_vim'
 " Golang Plugins
 "Plugin 'fatih/vim-go'
-" JSX syntax highlight.
-Plugin 'mxw/vim-jsx'
 " JS highlight
 Plugin 'pangloss/vim-javascript'
+" JSX syntax highlight.
+Plugin 'maxmellon/vim-jsx-pretty'
 " Vue highlight
 Plugin 'posva/vim-vue'
 " html5 support
@@ -366,10 +366,6 @@ function SetTitle()
 endfunction
 autocmd BufNewFile * normal G
 
-" Vim-jsx ------------------------------
-
-" if you use JSX syntax in .js file, please enable it.
-let g:jsx_ext_required = 1
 
 " Vim-markdown ------------------------------
 
