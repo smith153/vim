@@ -339,6 +339,8 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.readonly = ''
+let g:airline_symbols.colnr = '  :'
+"let g:airline_symbols.maxlinenr = ' '
 
 " new file set title and turn to endline
 autocmd BufNewFile *.sh,*.py,*.rb,*.pl exec ":call SetTitle()"
