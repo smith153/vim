@@ -347,7 +347,9 @@ autocmd BufNewFile *.sh,*.py,*.rb,*.pl exec ":call SetTitle()"
 function SetTitle()
     if &filetype == 'sh'
         call setline(1,"\#!/bin/bash")
-        call append(line("."), "")
+        call append(line("."),"set -euo pipefail")
+	    call append(line(".")+1, "")
+
 
     elseif &filetype == 'python'
         call setline(1,"#!/usr/bin/env python")
