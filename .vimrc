@@ -2,7 +2,7 @@
 " ============================================================================
 " Vundle initialization
 " Avoid modify this section, unless you are very sure of what you are doing
-
+" https://github.com/junegunn/vim-plug
 " no vi-compatible
 set nocompatible
 
@@ -146,6 +146,9 @@ set hlsearch
 
 " syntax highlight on
 syntax on
+
+set ignorecase
+set smartcase
 
 "set leader
 let mapleader = ";"
